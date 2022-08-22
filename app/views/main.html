@@ -1,0 +1,83 @@
+<div ng-controller="MainController as messageForm">
+  <div ng-init="getMessages()">
+    <h2>SMS</h2>
+        
+    <form ng-submit="sendMessage()">
+      <div class="form-container">
+        <span>Telefone do qual será enviado *</span>
+        <br />
+        <input
+          type="text" 
+          ng-model="messageForm.sendNumber"  
+          ui-mask="(99) 99999-9999"
+          required
+        >
+        <br />
+        <br />
+  
+        <span>Telefone para quem está enviando *</span>
+        <br />
+        <input 
+          type="text" 
+          ng-model="messageForm.receiverNumber"  
+          ui-mask="(99) 99999-9999"
+          required
+        >
+        <br />
+        <br />
+  
+        <span>Mensagem *</span>
+        <br />
+        <textarea
+          type="text" 
+          ng-model="messageForm.text"  
+          cols="40"
+          rows="5"
+          placeholder="Mensagem"
+          maxlength="255"
+          required
+        ></textarea>
+        <br />
+  
+        <button class="btn-primary" type="submit" value="add">
+          ENVIAR
+        </button>
+      </div>
+    </form>
+    <br />
+
+    <div class="messages-container">
+      <table>
+        <tr>
+          <th>Numero enviado</th>
+          <th>Texto</th>
+          <th>T9 texto</th>
+          <th>Horá do envio</th>
+        </tr>
+        
+        <tr ng-repeat="message in messages">
+          <td>{{message.formattedReceiverNumber}}</td>
+          <td>
+            <textarea
+              cols="40"
+              rows="5"
+              readonly
+            >
+              {{message.text}}
+            </textarea>
+          </td>
+          <td>
+            <textarea
+              cols="40"
+              rows="5"
+              readonly
+            >
+              {{message.telephoneEncodedText}}
+            </textarea>
+          </td>
+          <td>{{message.formattedCreatedAt}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
