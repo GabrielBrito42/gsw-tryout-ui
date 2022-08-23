@@ -1,6 +1,6 @@
-var gzippo = require('gzippo');
-  var express = require('express');
-  var app = express();
+const gzippo = require('gzippo');
+const express = require('express');
+const app = express();
  
-  app.use(gzippo.staticGzip("" + __dirname + "/dist"));
-  app.listen(process.env.PORT || 5000);
+app.use(gzippo.staticGzip("" + __dirname + "/dist"));
+app.listen(process.env.PORT || 5000);
