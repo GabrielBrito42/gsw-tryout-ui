@@ -112,8 +112,9 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          open: true,
-          base: '<%= yeoman.dist %>'
+          port: 9000,
+          // Change this to '0.0.0.0' to access the server from outside.
+          hostname: '0.0.0.0',
         }
       }
     },
