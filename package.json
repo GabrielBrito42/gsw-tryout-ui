@@ -2,6 +2,7 @@
   "name": "gswtryoutui",
   "private": true,
   "scripts": {
+    "install:dependencies": "npm install && bower install && bundle install",
     "test": "mocha 'test/**/*.js' --recursive --timeout 60000 --exit -r jsdom-global/register",
     "testEnvironment": "jsdom",
     "start:prod": "grunt serve:dist",
