@@ -27,7 +27,28 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
-
+    ngconstant: {
+      options: {
+        name: 'config',
+        dest: '<%= yeoman.app %>/scripts/config.js',
+        constants: {
+          title: 'grunt-ng-constant',
+          debug: true
+        }
+      },
+      dev: {
+        constants: {
+          ENV: 'development',
+          API_URL: 'http://localhost:8080/api'
+        }
+      },
+      prod: {
+        constants: {
+          ENV: 'production',
+          API_URL: 'https://gsw-tryout-api.herokuapp.com/api'
+        }
+      },
+    },
     // Project settings
     yeoman: appConfig,
 
@@ -476,6 +497,15 @@ module.exports = function (grunt) {
   });
   grunt.loadNpmTasks('grunt-babel');
   grunt.registerTask('default', ['babel']);
+  grunt.loadNpmTasks('grunt-ng-constant');
+
+  grunt.registerTask('development', [
+    'ngconstant:dev'
+  ]);
+
+  grunt.registerTask('production', [
+    'ngconstant:prod'
+  ]);
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -485,6 +515,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
+      'development',
       'concurrent:server',
       'postcss:server',
       'connect:livereload',
@@ -512,6 +543,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'postcss',
+    'production',
     'ngtemplates',
     'concat',
     'browserify',

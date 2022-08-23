@@ -1,6 +1,8 @@
-"use strict";
-
 angular.module('config', [])
+
+.constant('title', 'grunt-ng-constant')
+
+.constant('debug', true)
 
 .constant('ENV', 'development')
 

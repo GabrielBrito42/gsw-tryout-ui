@@ -45,7 +45,6 @@
     "grunt-karma": "^4.0.2",
     "grunt-newer": "^1.1.0",
     "grunt-ng-annotate": "^0.9.2",
-    "grunt-ng-constant": "^2.0.3",
     "grunt-postcss": "^0.5.5",
     "grunt-rev": "^0.1.0",
     "grunt-svgmin": "^2.0.0",
@@ -64,5 +63,8 @@
     "node": "latest",
     "sweetalert2": "^11.4.29",
     "time-grunt": "^1.0.0"
+  },
+  "devDependencies": {
+    "grunt-ng-constant": "^2.0.3"
   }
 }
