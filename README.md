@@ -1,12 +1,23 @@
-# gsw-tryout-ui
+# Descrição do projeto
+Essa é uma página web usando angularjs e grunt, contém um formulário para que você possa enviar mensagens, e também lista todas as mensagens já enviadas
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+## Tecnologias utilizadas
+Angularjs, Gruntjs, Karma, Jasmine
 
-## Build & development
+## Iniciando a aplicação
+É necessário que você possua o ruby instalado em sua máquina
+```bash
+$ npm run install:dependencies
+```
+Esse script irá instalar todas as dependências necessárias, em seguida para iniciar no localhost
+```bash
+$ grunt serve
+```
 
-Run `grunt` for building and `grunt serve` for preview.
+## Testes
+```bash
+$ grunt test
+```
 
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+- Autor - Gabriel Cardoso.
+- Heroku - [Heroku](https://gsw-tryout-ui.herokuapp.com/): https://gsw-tryout-ui.herokuapp.com/#!/
