@@ -18,11 +18,11 @@ module.exports = function(config) {
       '../bower_components/angular-touch/angular-touch.js',
       '../bower_components/angular-ui-mask/dist/mask.js',
       '../bower_components/sweetalert/dist/sweetalert.min.js',
-      '../app/scripts/config.js',
-      '../app/scripts/app.js',
+      '../app/src/config.js',
+      '../app/src/app.js',
   
-      '../app/scripts/controllers/*.js',
-      '../app/scripts/services/*.js',
+      '../app/src/controllers/*.js',
+      '../app/src/services/*.js',
       './spec/controllers/main.js',
       './spec/services/main.js'
     ],
