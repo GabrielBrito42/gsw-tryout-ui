@@ -20,4 +20,4 @@ $ grunt test
 ```
 
 - Autor - Gabriel Cardoso.
-- Heroku - [Heroku](https://gsw-tryout-ui.herokuapp.com/): https://gsw-tryout-ui.herokuapp.com/#!/
+- Heroku - [Heroku](https://gsw-tryout-ui.herokuapp.com/): https://gsw-tryout-ui.herokuapp.com
